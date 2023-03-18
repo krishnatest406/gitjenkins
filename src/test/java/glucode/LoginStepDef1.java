@@ -27,7 +27,7 @@ public class LoginStepDef1 {
 	@Given("open browser")
 	public void openBrowser()  {
 		wu=new WebSiteUtility();
-	    bc.driver=wu.launchBrowser("firefox");
+	    bc.driver=wu.launchBrowser("edge");
 		bc.driver.manage().window().maximize();
 		bc.driver.manage().timeouts().implicitlyWait(Duration.ofMillis(4000));	
 	}	
@@ -41,6 +41,7 @@ public class LoginStepDef1 {
 	@Then("get title of page is equal to {string}")
 	public void titleValidate(String tt) throws IOException, Exception {
 		String title=bc.driver.getTitle();
+		Thread.sleep(2000);
 		if(title.contains(tt)) {
 			System.out.println("fb login page opened");
 			
@@ -48,7 +49,7 @@ public class LoginStepDef1 {
 			
 			System.out.println("fb login page not opened");
 		}
-		Thread.sleep(4000);
+	//	Thread.sleep(3000);
 	}
 	
 }
