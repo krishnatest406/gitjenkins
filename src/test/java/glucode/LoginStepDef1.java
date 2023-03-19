@@ -20,10 +20,8 @@ public class LoginStepDef1 {
     public WebSiteUtility wu;
 	
     public LoginStepDef1(BaseClass bc) {
-		this.bc=bc;
-		
-	}
-    
+		this.bc=bc;		
+	}   
 	@Given("open browser")
 	public void openBrowser()  {
 		wu=new WebSiteUtility();
@@ -35,9 +33,7 @@ public class LoginStepDef1 {
 	public void openSite(String url) throws Exception {
 		wu=new WebSiteUtility();
 		wu.launchSite(bc.driver, url);
-	}
-	
-	
+	}	
 	@Then("get title of page is equal to {string}")
 	public void titleValidate(String tt) throws IOException, Exception {
 		String title=bc.driver.getTitle();
