@@ -18,9 +18,10 @@ public class LoginStepDef1 {
 	public Scenario s;
     public BaseClass bc;
     public WebSiteUtility wu;
-	
+   // face book test 
     public LoginStepDef1(BaseClass bc) {
 		this.bc=bc;		
+		
 	}   
 	@Given("open browser")
 	public void openBrowser()  {
