@@ -16,7 +16,7 @@ public class LoginStepDef2 {
 	public LoginStepDef2(BaseClass bc) {
 		this.bc=bc;
 	}
-	//close site	   
+	   
 	@When("close the site")
 	public void closeSite() throws Exception {
 		Thread.sleep(4000);
